@@ -1,14 +1,7 @@
-import sys
-
-if sys.version_info >= (3, 8):
-    from importlib.metadata import metadata
-else:
-    from importlib_metadata import metadata
+import sqlalchemy
 
 
-_sqlalchemy_version = tuple(
-    [int(i) for i in metadata("sqlalchemy")["Version"].split(".")[:2]]
-)
+_sqlalchemy_version = tuple([int(i) for i in sqlalchemy.__version__.split(".")[:2]])
 
 
 # In sqlalchemy 2.0, some functions moved to sqlalchemy.orm.

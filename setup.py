@@ -74,8 +74,7 @@ setup(
     include_package_data=True,
     platforms='any',
     install_requires=[
-        'SQLAlchemy>=1.3',
-        "importlib_metadata ; python_version<'3.8'",
+        'SQLAlchemy>=1.3'
     ],
     extras_require=extras_require,
     python_requires='~=3.6',
